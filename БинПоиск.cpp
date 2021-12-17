@@ -9,19 +9,19 @@ int main()
         mid_idx = 0,
         left = 0,
         right = 0;
-    left = 10;
+    left = 1;
     right = pow(2,31)-1;
-    //cout << right + 10;
-    cin >> key;
     while (left < right) {
-        //mid_idx = left + (right - left) / 2;
-        mid_idx = (right + left) / 2;
+        mid_idx = left + (right - left) / 2;
+        //mid_idx = (right + left) / 2;
         cout << mid_idx;
-        if (key <= mid_idx) {
-            right = mid_idx;
+        if (0 <= mid_idx) {
+            cout<< "\ngood :)";
+            return 0;
         }
         else {
-            left = mid_idx + 1;
+            cout << "\nbad :(";
+            return -1;
         }
     }
     cout << right;
